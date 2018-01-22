@@ -1,0 +1,13 @@
+SMAP
+colorManagement_jsp.java
+JSP
+*S JSP
+*F
++ 0 colorManagement.jsp
+console/jspf/colorManagement.jsp
+*L
+1,4:54
+8,4:57
+11:91,5
+11,12:62
+*E

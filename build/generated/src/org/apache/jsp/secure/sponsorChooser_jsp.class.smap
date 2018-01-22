@@ -1,0 +1,23 @@
+SMAP
+sponsorChooser_jsp.java
+JSP
+*S JSP
+*F
++ 0 sponsorChooser.jsp
+secure/sponsorChooser.jsp
+*L
+1,2:60
+7,4:62
+10:141,5
+10,10:67
+19:159,5
+19,20:79
+38:177,5
+38,4:101
+41:195,12
+42:207,8
+43:215
+43,6:107
+48:240,5
+48,8:115
+*E

@@ -1,0 +1,25 @@
+SMAP
+userManagement_jsp.java
+JSP
+*S JSP
+*F
++ 0 userManagement.jsp
+console/jspf/userManagement.jsp
+*L
+1,4:57
+8,4:60
+11:152,5
+11,10:65
+20:170,5
+20,28:77
+47:188,5
+47,2:107
+48:206,5
+48,2:111
+49:224,5
+49,2:115
+50:242,5
+50,10:119
+59:260,5
+59,4:131
+*E
