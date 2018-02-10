@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context docBase="/Users/pjain/Tomcat/prod/AMMAP" antiJARLocking="false" antiResourceLocking="false">
+
+<Environment description="A-Map env BASE URL" name="amap/baseURL" type="java.lang.String" value="http://localhost:8080/analytics/iomg/"/>
+<Environment description="hotspot queries file" name="config.Hotspot" type="java.lang.String" value="/Users/pjain/Tomcat/prod/AMMAP/WEB-INF/classes/com/lo/hotspot/hotspot.properties"/>
+<Environment description="config file" name="config.Config" type="java.lang.String" value="/Users/pjain/Tomcat/prod/AMMAP/WEB-INF/classes/com/lo/config/config.properties"/>
+<Environment description="static config file" name="config.StaticConfig" type="java.lang.String" value="/Users/pjain/Tomcat/prod/AMMAP/WEB-INF/classes/com/lo/config/staticConfig.properties"/>
+<Environment description="map styles config file" name="config.MapStyles" type="java.lang.String" value="/Users/pjain/Tomcat/prod/AMMAP/WEB-INF/classes/com/lo/config/mapStyles.properties"/>
+<Environment description="console config file" name="config.ConsoleConfig" type="java.lang.String" value="/Users/pjain/Tomcat/prod/AMMAP/WEB-INF/classes/com/lo/config/consoleConfig.properties"/>
+<Environment description="queries file" name="config.Queries" type="java.lang.String" value="/Users/pjain/Tomcat/prod/AMMAP/WEB-INF/classes/com/lo/config/queries.properties"/>
+<Environment description="console queries file" name="config.ConsoleQueries" type="java.lang.String" value="/Users/pjain/Tomcat/prod/AMMAP/WEB-INF/classes/com/lo/config/consoleQueries.properties"/>
+<Environment description="build file" name="config.Build" type="java.lang.String" value="/Users/pjain/Tomcat/prod/AMMAP/WEB-INF/classes/build.properties"/>
+<Environment description="config interval" name="configMonitoringInterval" type="java.lang.Long" value="1000"/>
+
+    <Environment description="Google Maps API Premier key" name="google.maps.client" type="java.lang.String" value="gme-loyaltyone"/>
+    
+    <Environment description="Google Maps API Premier key" name="google.maps.signature" type="java.lang.String" value="vMwdAJ7Dg0eSlYFlR13-ecb1Ls4="/>
+
+    <!-- KMS SERVER -->    
+    <Environment description="KMS server url" name="kms/url" type="java.lang.String" value="http://localhost:8081/kms"/>
+    
+    <Environment description="is this instance running the file uploader" name="loadFile" type="java.lang.Boolean" value="false"/>
+        
+	<!-- AFTER DA-LAYER UPDATE -->
+	<!-- SPECTRUM -->
+	<Environment description="spectrum url" name="spectrum/url" type="java.lang.String" value="https://spectrum.pitneybowes.com/soap/"/>
+	<Environment description="spectrum username" name="spectrum/username" type="java.lang.String" value="LtyOne6437"/>
+	<Environment description="spectrum password" name="spectrum/password" type="java.lang.String" value="#LO2609%em"/>
+  
+    <!-- MAIL -->
+    <!--Environment description="email server" name="emailHost" type="java.lang.String" value="transit.telusquebec.net" /-->
+	<Environment description="email server" name="emailHost" type="java.lang.String" value="mailhost.tdc.loyalty.com" />
+    <Environment description="email server port, default to 25 is unespecified" name="emailPort" type="java.lang.String" value="25" />
+    <!--Environment description="optional email user" name="emailUser" type="java.lang.String" value="transit.telusquebec.net" /-->
+    <!--Environment description="optional email password" name="emailPass" type="java.lang.String" value="transit.telusquebec.net" /-->
+    
+    <!-- MIPOOL -->
+    <Environment description="mipool set in KMS db connexions" name="mipool" type="java.lang.String" value="iomg" />
+
+	<!-- ENVIRONMENT -->
+    <Environment description="server environment type" name="amap_env" type="java.lang.String" value="uat" />
+
+    <!-- pooled datasource -->
+	<Resource name="iomg" type="javax.sql.DataSource" auth="Container"
+        driverClassName="oracle.jdbc.driver.OracleDriver"
+        url="jdbc:oracle:thin:@//lba-szn-0001.loyalty.com:1521/UTLRP01LOD"
+        username="irving" password="irving#lod7"
+        accessToUnderlyingConnectionAllowed="true"
+        poolPreparedStatements="true"
+        maxActive="150" maxIdle="45" maxOpenPreparedStatements="150" maxWait="240000"
+        logAbandoned="true" removeAbandoned="true" removeAbandonedTimeout="30"
+        testOnBorrow="true" validationQuery="select 1 from dual" connectionProperties="defaultRowPrefetch=500"
+        />
+	
+		<Resource name="lone" type="javax.sql.DataSource" auth="Container"        
+        driverClassName="oracle.jdbc.driver.OracleDriver"
+        url="jdbc:oracle:thin:@//lba-szn-0001.loyalty.com:1521/UTLRP01LOD"
+        username="lone" password="lone#lod1"
+        accessToUnderlyingConnectionAllowed="true"
+        poolPreparedStatements="true"
+        maxActive="150" maxIdle="45" maxOpenPreparedStatements="150" maxWait="240000"
+        logAbandoned="true" removeAbandoned="true" removeAbandonedTimeout="30"
+        testOnBorrow="true" validationQuery="select 1 from dual" connectionProperties="defaultRowPrefetch=500"
+        />
+		
+</Context>
